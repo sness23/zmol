@@ -1,0 +1,30 @@
+# Node / Electron
+node_modules/
+dist/
+build/
+out/
+release/
+*.log
+
+# Editor / OS
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+
+# Env / secrets
+.env
+.env.local
+*.pem
+*.key
+
+# Python (for show generator)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated viewer assets
+public/molstar/
+public/dist/
