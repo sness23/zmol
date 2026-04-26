@@ -1,0 +1,49 @@
+name: Feature request / command request
+description: A PyMOL or ChimeraX command that should work but doesn't, or any other feature you'd like to see.
+title: "[feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing an enhancement! zmol's roadmap is dictated mostly by community demand for specific PyMOL / ChimeraX commands. Naming the specific command (or feature) helps a lot.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feature?
+      options:
+        - PyMOL command compatibility
+        - ChimeraX command compatibility
+        - New zmol-specific feature
+        - Cross-platform / packaging
+        - Documentation / teaching
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: The command (if applicable)
+      description: For command requests, paste the exact PyMOL or ChimeraX command syntax you want supported.
+      placeholder: "PyMOL: `bg_color white`\nor ChimeraX: `set bgColor white`"
+    validations:
+      required: false
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: What are you trying to do? (Even one sentence helps prioritize.)
+      placeholder: "I'm preparing figures for a paper and need to set the background to white."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Workarounds you've tried
+      description: Any current way to accomplish this in zmol, even if clunky?
+    validations:
+      required: false

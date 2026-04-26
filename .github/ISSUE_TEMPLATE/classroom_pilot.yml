@@ -1,0 +1,76 @@
+name: Classroom pilot interest
+description: I teach a course and would consider piloting zmol with my students.
+title: "[pilot]: "
+labels: ["classroom-pilot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you! Classroom adoption is one of the most important kinds of contribution we can ask for — see the [project's funding strategy](https://github.com/sness23/zmol/blob/main/README.md#status--prev01) for why this matters strategically. We'll respond promptly to all pilot inquiries.
+
+  - type: input
+    id: institution
+    attributes:
+      label: Institution
+      placeholder: "University of X, Department of Y"
+    validations:
+      required: true
+
+  - type: input
+    id: course
+    attributes:
+      label: Course (name + level)
+      placeholder: "BIOC 202 — Introduction to Biochemistry (2nd year undergrad)"
+    validations:
+      required: true
+
+  - type: input
+    id: students
+    attributes:
+      label: Approximate enrolment
+      placeholder: "~30 students per term"
+    validations:
+      required: true
+
+  - type: input
+    id: term
+    attributes:
+      label: Earliest term you'd consider piloting
+      placeholder: "Fall 2026 / Winter 2027 / depends on stability"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: What scale of pilot?
+      options:
+        - Single demo session (30–60 min)
+        - 1–2 lab sessions across the term
+        - Replace existing PyMOL / ChimeraX usage for the whole term
+        - Other (describe)
+    validations:
+      required: true
+
+  - type: textarea
+    id: needs
+    attributes:
+      label: What would zmol need to do for the pilot to work?
+      description: e.g., specific commands, specific platforms, specific features, specific tutorials. Honest "won't work without X" is enormously useful.
+    validations:
+      required: false
+
+  - type: input
+    id: contact
+    attributes:
+      label: Best email to reach you (optional)
+      description: Public visibility — only fill if you're comfortable with that.
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+    validations:
+      required: false

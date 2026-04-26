@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Discussions
+    url: https://github.com/sness23/zmol/discussions
+    about: For longer-form questions, design ideas, or "how do I do X" — please use Discussions instead of Issues.
+  - name: Email the maintainer
+    url: mailto:sness@sness.net
+    about: For sensitive issues, classroom-pilot inquiries you'd rather discuss privately, or anything that doesn't fit a public channel.

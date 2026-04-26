@@ -1,0 +1,71 @@
+name: Bug report
+description: Something is broken or behaving unexpectedly in zmol.
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug report! Please include enough detail that someone (often the maintainer alone, since zmol is solo-maintained) can reproduce.
+
+  - type: input
+    id: zmol-version
+    attributes:
+      label: zmol version
+      description: The version printed by `zmol --version`, or the git commit if running from source.
+      placeholder: "v0.1.0 (or commit a9e795f)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Linux (Ubuntu / Debian)
+        - Linux (Fedora / RHEL)
+        - Linux (Arch / other)
+        - macOS
+        - Windows
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the unexpected behavior. If you saw an error message, include the exact text.
+      placeholder: "When I ran `select sel, chain A and resi 50-60`, the viewer hung / nothing was selected / I got the error '...'."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: A minimal sequence of commands. Ideally something a stranger can paste into a fresh zmol install.
+      placeholder: |
+        1. Open zmol
+        2. Run `load 1cbs`
+        3. Run `select sel, chain A and resi 50-60`
+        4. Observe: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: What was the intended outcome of the steps above?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      description: Any console output, error logs, or screenshots that help. Drag-and-drop images directly into this box.
+      placeholder: "(Optional)"
+    validations:
+      required: false
